@@ -69,6 +69,21 @@ class Vod extends V4Curl
                     ],
                 ];
                 break;
+            case 'us-east-2':
+                $config = [
+                    'host' => 'https://vod.us-east-1.bytedanceapi.com',
+                    'config' => [
+                        'timeout' => 5.0,
+                        'headers' => [
+                            'Accept' => 'application/json'
+                        ],
+                        'v4_credentials' => [
+                            'region' => 'us-east-2',
+                            'service' => 'vod',
+                        ],
+                    ],
+                ];
+                break;
             default:
                 throw new \Exception("Cant find the region, please check it carefully");
         }
